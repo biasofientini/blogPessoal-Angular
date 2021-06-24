@@ -1,6 +1,50 @@
 #img-bg{
     background-image: url('https://i.imgur.com/GrW6Fmt.png');
-    min-height: 695px;
+    min-height: 685px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.raleway{
+    font-family: Raleway;
+}
+
+input{
+    width: 450px;
+    height: 40px;
+    left: 900px;
+
+    background: #FFFFFF;
+    border: 1px solid #E75454;
+    box-sizing: border-box;
+    border-radius: 100px;
+}
+
+.entrar-cadastrar{
+    color: #E75454;
+
+    font-family: 'Poiret One', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 30px;
+    letter-spacing: 0.1em;
+}
+
+.gifentrar-cadastrar{
+    position: absolute;
+    width: 130px;
+    display: flex-end;
+    justify-content: flex-end;
+    left: 400px;
+    bottom: 0;
+    padding: 0;
+}
+
+#img-gif{
+    background-image: url('https://i.imgur.com/wJMNcQW.gif');
+    min-height: 68px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
