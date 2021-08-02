@@ -1,4 +1,4 @@
-ul.social-network{
+/* ul.social-network{
     list-style: none;
     padding: 0px;
 }
@@ -21,4 +21,36 @@ ul.social-network li{
 
 .fa-github:hover{
     color: black;
+} */
+p{
+    color: #ffffff;
+    font-family: Raleway;
+    font-size: 18px;
+}
+
+ul{
+    list-style: none;
+    padding: 0px;
+}
+
+ul li{
+    display: inline;
+    margin: 0px;
+    padding: 10px;
+}
+
+.bc{
+    background-color: #E75454;
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    font-family: Raleway;
+}
+
+a:hover{
+    cursor: pointer;
+    color: #A8A0A0;
 }

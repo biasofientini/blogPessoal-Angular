@@ -1,6 +1,13 @@
 .fs-16{
     font-size: 16px;
+    font-family: Raleway;
+    color: #A8A0A0;
 }
 a{
+    text-decoration: none;
+}
+a:hover{
     cursor: pointer;
+    color: #E75454;
+    font-size: 17px;
 }

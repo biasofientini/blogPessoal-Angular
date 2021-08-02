@@ -1,58 +1,87 @@
 <div class="container-fluid">
-
     <div class="row">
-
-        <div class="col-md-6" id="img-bg"></div>
+        <div class="col">
+            <div class="row d-flex justify-content-center">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner ml-0">
+                        <div class="carousel-item active">
+                            <img src="https://i.imgur.com/GrW6Fmt.png" class="d-block w-100" alt="..." height="685px">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://i.imgur.com/GrW6Fmt.png" class="d-block w-100" alt="..." width="25px"
+                                height="685px">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://i.imgur.com/GrW6Fmt.png" class="d-block w-100" alt="..." width="25px"
+                                height="685px">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev buttoncarousel d-flex align-items-center justify-content-center"
+                        href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only"></span>
+                    </a>
+                    <a class="carousel-control-next buttoncarousel" href="#carouselExampleIndicators" role="button"
+                        data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
 
         <div class="col-md-6 mt-5 mb-5">
 
             <div class="row d-flex justify-content-center">
 
-                <div class="col-md-10 mx-auto">
+                <div class="col-md-10">
 
-                    <h1 class="text-center entrar-cadastrar">CREATE ACCOUNT</h1>
+                    <div class="row d-flex justify-content-center">
 
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input class="form-control" type="text" name="name" id="name" placeholder="Name">
+                        <h1 class="text-center entrar-cadastrar mb-4">CREATE ACCOUNT</h1>
+
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input class="form-control" type="text" name="name" id="name" placeholder="Name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="user">Username</label>
+                            <input class="form-control" type="text" name="user" id="user" placeholder="Username">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="piclink">Picture link</label>
+                            <input class="form-control" type="text" name="piclink" id="piclink"
+                                placeholder="Picture link">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input class="form-control" type="password" name="password" id="password"
+                                placeholder="Password">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirmpassword">Confirm password</label>
+                            <input class="form-control" type="password" name="confirmpassword" id="confirmsenha"
+                                placeholder="Confirm password">
+                        </div>
+
+                        <div class="d-flex justify-content-center mt-5">
+                            <button type="submit" class="btn buttonpadrao mr-4" (click)='cancel()'>CANCEL</button>
+                            <button type="submit" class="btn buttonpadrao" (click)='signup()'>SIGN UP</button>
+                        </div>
+
+                        <div>
+                            <div class="gifentrar-cadastrar" id="img-gif"></div>
+                        </div>
                     </div>
-
-                    <div class="form-group">
-                        <label for="user">User</label>
-                        <input class="form-control" type="text" name="user" id="user" placeholder="User">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="piclink">Picture link</label>
-                        <input class="form-control" type="text" name="piclink" id="piclink" placeholder="Picture link">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input class="form-control" type="password" name="password" id="password" placeholder="Password">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="confirmpassword">Confirm password</label>
-                        <input class="form-control" type="password" name="confirmpassword" id="confirmsenha"
-                            placeholder="Confirm password">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="tipouser">User type</label>
-                        <select name="tipouser" id="tipouser">
-                            <option>Please select the user type: </option>
-                            <option value="normal">Normal</option>
-                            <option value="adm">Admin</option>
-                        </select>
-                    </div>
-
-                    <div class="d-flex justify-content-center">
-                        <button type="submit" class="btn btn-danger mr-4">Cancelar</button>
-                        <button type="submit" class="btn btn-success">Cadastrar</button>
-                    </div>
-
-                    <div class="gifentrar-cadastrar" id="img-gif"></div>
 
                 </div>
 

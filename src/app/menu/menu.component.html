@@ -1,36 +1,31 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-dark">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg navbar-light">
+    <button class="navbar-toggler font navbar-light" type="button" data-toggle="collapse"
+        data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto d-flex align-items-center">
-
-            <li class="nav-item active">
-                <img src="https://img.freepik.com/vetores-gratis/desenvolvimento-web-engenharia-de-programador-e-site-de-codificacao-em-telas-de-interface-de-realidade-aumentada-desenvolvedor-de-projeto-engenheiro-de-programacao-de-software-ou-design-de-aplicativo-cartoon-illustration_107791-3863.jpg?size=626&ext=jpg&ga=GA1.2.2105300053.1620432000"
-                    alt="" class="img-fluid rounded-circle" width="50px" height="50px">
-            </li>
-
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item pl-3">
-                <p class="m-0 font-weight-bold text-danger fs-16">Nome do usuário</p>
-            </li>
-
-            <li class="nav-item pl-3">
-                <a href="">
-                    <p class="text-white fs-16 m-0">
-                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                    </p>
-                </a>
+                <p class="m-0 font-weight-bold text-danger fs-16">Blog Pessoal</p>
             </li>
         </ul>
-
-        <ul class="navbar-nav ml-auto d-flex align-items-center">
-    
+        <ul class="navbar-nav me-auto mb-2 mt-2 mr-4">
             <li class="nav-item pl-3">
-                <a class="m-0 font-weight-bold text-danger fs-16">Sair <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                <a class="m-0 font-weight-bold fs-16" (click)='about()'>ABOUT</a>
             </li>
 
-        </ul>
+            <li class="nav-item pl-3">
+                <a class="m-0 font-weight-bold fs-16" (click)='more()'>MORE</a>
+            </li>
 
+            <li class="nav-item pl-3">
+                <a class="m-0 font-weight-bold fs-16" (click)='login()'>LOGIN</a>
+            </li>
+
+            <li class="nav-item pl-3">
+                <a class="m-0 font-weight-bold fs-16" (click)='signup()'>SIGN UP</a>
+            </li>
+        </ul>
     </div>
 </nav>
