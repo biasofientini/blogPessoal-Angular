@@ -1,0 +1,26 @@
+.fs-16{
+    font-size: 16px;
+    font-family: Raleway;
+    color: #fff;
+}
+
+.fs-24{
+    font-size: 20px;
+    font-family: Raleway;
+    color: #E75454;
+}
+
+.a-texto{
+    text-decoration: none;
+    color: #fff;
+}
+
+.a-texto:hover{
+    cursor: pointer;
+    color: #E75454;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}

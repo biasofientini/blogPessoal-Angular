@@ -1,0 +1,78 @@
+<div class="container-fluid align-items-center">
+    <div class="row" style="background: #E75454; height: 330px;">
+        <div class="col-md-4">
+            <h1 class="fs-22 text-light p-3">HELLO, {{user.nome}}</h1>
+        </div>
+        <div class="col-md-4">
+            <div class="row justify-content-center d-flex pt-5">
+                <svg style="border: 5px solid #EEACAC;" xmlns="http://www.w3.org/2000/svg" width="15rem"
+                    height="14.5rem" fill="#EEACAC" class="bi bi-person borderimg" viewBox="0 0 16 16">
+                    <path
+                        d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                </svg>
+            </div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-end">
+            <a href="/home" class="text-light p-3">SAIR</a>
+        </div>
+
+        <div class="col-md-6 d-flex justify-content-start p-3">
+            <h1 class="fs-22 text-light">new post</h1>
+        </div>
+
+        <div class="col-md-6 d-flex justify-content-end mb-3">
+            <form class="d-flex align-items-center">
+                <input style="border-radius: 100px; width: 225px; height: 34px;" class="form-control mx-2 fs-14"
+                    type="search" placeholder="Search" aria-label="Search">
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="container mb-5 mt-5" id="postagens">
+    <div class="tab-content mt-5" id="myTabContent">
+        <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel" aria-labelledby="todasPostagens-tab">
+            <div class="card-columns">
+                <!-- <div class="card text-center" *ngFor='let item of listaPostagens'>
+                    <div class="card-body">
+                        <h5 class="card-title m-0">{{item.titulo}}</h5>
+                        <small class="text-muted">Tema: {{item.tema.descricao}}</small>
+                        <p class="card-text mt-3">{{item.texto}}</p>
+                        <p class="card-text"><small class="text-muted">{{item.data | date : "dd/MM/yyyy 'às'
+                                HH:mm"}}</small></p>
+                        <p class="card-text"><small class="text-muted">by: {{item.usuario.nome}}</small></p>
+                    </div>
+                </div>
+            </div> -->
+            </div>
+            <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="minhasPostagens-tab">
+                <!-- <div class="card-columns">
+                <div class="card text-center" *ngFor='let item of user.postagem'>
+                    <div class="card-body">
+                        <h5 class="card-title m-0">{{item.titulo}}</h5>
+                        <p class="card-text mt-3">{{item.texto}}</p>
+                        <p class="card-text"><small class="text-muted">{{item.data | date : "dd/MM/yyyy 'às'
+                                HH:mm"}}</small></p>
+                        <p class="card-text"><small class="text-muted">by: {{user.nome}}</small></p>
+                    </div>
+                </div>
+            </div> -->
+            </div>
+            <div class="tab-pane fade" id="postagemTema" role="tabpanel" aria-labelledby="postagemTema-tab">
+
+                <!-- <div class="card-columns" *ngFor='let tema of listaTemas'>
+                <div class="card text-center" *ngFor='let item of tema.postagem'>
+                    <div class="card-body">
+                        <h5 class="card-title m-0">{{item.titulo}}</h5>
+                        <p class="card-text mt-3">{{item.texto}}</p>
+                        <p class="card-text"><small class="text-muted">{{item.data | date : "dd/MM/yyyy 'às'
+                                HH:mm"}}</small></p>
+                        <p class="card-text"><small class="text-muted">by: {{item.usuario.nome}}</small></p>
+                    </div>
+                </div>
+            </div> -->
+            </div>
+        </div>
+    </div>
+</div>
+<app-rodape></app-rodape>

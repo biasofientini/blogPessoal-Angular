@@ -1,0 +1,32 @@
+.fs-22{
+    font-size: 22px;
+    font-family: Raleway;
+    letter-spacing: 0.12em;
+}
+
+.fs-14{
+    font-size: 14px;
+    font-family: Raleway;
+    letter-spacing: 0.12em;
+}
+
+.borderimg{
+    background: rgba( 255, 255, 255, 0.2 );
+    box-shadow: 0 8px 22px 0 rgba(94, 31, 73, 0.37);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 200px;
+    border: 5px solid rgba(247, 241, 241, 0.18);
+}
+
+a{
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Raleway;
+    letter-spacing: 0.12em;
+}
+
+a:hover{
+    cursor: pointer;
+    color: #A8A0A0;
+}
