@@ -35,36 +35,41 @@
             </div>
         </div>
 
-        <div class="col-md-6 mt-5 mb-5">
+        <div class="col-md-6">
 
             <div class="row d-flex justify-content-center">
 
                 <div class="col-md-6">
 
-                    <div class="row d-flex justify-content-center">
+                    <div class="row d-flex justify-content-center pt-5 vh-100">
 
-                        <h1 class="text-center entrar-cadastrar my-4">LOGIN</h1>
+                        <div>
+                            <h1 class="text-center entrar-cadastrar my-4 mt-5">LOGIN</h1>
 
-                        <div class="form-group my-4">
-                            <label for="usuario">Username or email</label>
-                            <input class="form-control" type="text" name="usuario" id="usuario"
-                                placeholder="Your user or email">
+                            <div class="form-group my-4 mt-5">
+                                <label for="usuario">Username or email</label>
+                                <input [(ngModel)]='userLogin.usuario' class="form-control" type="text" name="usuario" id="usuario"
+                                    placeholder="Your user or email">
+                            </div>
+
+                            <div class="form-group my-2">
+                                <label for="senha">Password</label>
+                                <input [(ngModel)]='userLogin.senha' class="form-control" type="password" name="senha" id="senha"
+                                    placeholder="Your password">
+                            </div>
+
+                            <div class="d-flex ml-5 justify-content-center text-center">
+                                <button type="submit" class="btn buttonpadrao mr-4 my-4" (click)='cancel()'>CANCEL</button>
+                                <button type="submit" class="btn buttonpadrao my-4" (click)='login()'>LOGIN</button>
+                            </div>
+
+                            <hr class="mb-2">
+                            <p class="text-center mb-5">
+                                Does not have an acccount? <a href="cadastrar">CREATE ONE</a>
+                            </p>
                         </div>
 
-                        <div class="form-group my-2">
-                            <label for="senha">Password</label>
-                            <input class="form-control" type="password" name="senha" id="senha" placeholder="Your password">
-                        </div>
-
-                        <div class="d-flex ml-5 justify-content-center text-center">
-                            <button type="submit" class="btn buttonpadrao mr-4 my-4" (click)='cancel()'>CANCEL</button>
-                            <button type="submit" class="btn buttonpadrao my-4" (click)='login()'>LOGIN</button>
-                        </div>
-
-                        <hr class="mb-5">
-                        <p class="text-center">
-                            Does not have an acccount? <a href="cadastrar">CREATE ONE</a>
-                        </p>
+                        <div class="gifentrar-cadastrar" id="img-gif"></div>
 
                     </div>
 
