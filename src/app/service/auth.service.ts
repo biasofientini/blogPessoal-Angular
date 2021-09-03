@@ -30,5 +30,4 @@ export class AuthService {
     return this.http.get<User>(`${URL}/usuarios/${id}`, this.token())
   }
 
-
 }
