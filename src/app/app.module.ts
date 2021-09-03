@@ -12,6 +12,7 @@ import { SobreComponent } from './sobre/sobre.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { NewPostComponent } from './new-post/new-post.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FormsModule } from '@angular/forms';
     CadastrarComponent,
     HomeComponent,
     SobreComponent,
-    InicioComponent
+    InicioComponent,
+    NewPostComponent
   ],
   imports: [
     BrowserModule,

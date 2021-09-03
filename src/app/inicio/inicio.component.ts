@@ -68,17 +68,8 @@ export class InicioComponent implements OnInit {
     })
   }
 
-  publicar() {
-    this.tema.id = this.idTema
-    this.postagem.tema = this.tema
-    this.user.id = Number(localStorage.getItem("id") || "")
-    this.postagem.usuario = this.user
-    this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
-      this.postagem = resp
-      alert('SUCESSO')
-      this.postagem = new Postagem()
-      this.getAllPostagens()
-    })
+  newPost() {
+    this.router.navigate(['/new-post'])
   }
 
 }
