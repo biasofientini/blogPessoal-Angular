@@ -1,0 +1,44 @@
+.fs-titulo{
+    font-size: 50px;
+    font-family: Raleway;
+    color: #E75454;
+    letter-spacing: 0.12em;
+}
+
+input{
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #E75454;
+    box-sizing: border-box;
+    border-radius: 100px;
+    font-family: 'Poiret One', sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.12em;
+}
+
+textarea{
+    background: #FFFFFF;
+    border: 1px solid #E75454;
+    border-radius: 70px;
+    font-family: 'Poiret One', sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.12em;
+}
+
+.buttonpadrao{
+    width: 130px;
+    height: 40px;
+    top: 300px;
+    background: #E75454;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
+    border: 0px;
+    font-family: Raleway;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.buttonpadrao:hover{
+    color: black;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+}

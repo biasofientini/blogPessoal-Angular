@@ -45,4 +45,8 @@ export class NewPostComponent implements OnInit {
     })
   }
 
+  cancel() {
+    this.router.navigate(['/inicio'])
+  }
+
 }
