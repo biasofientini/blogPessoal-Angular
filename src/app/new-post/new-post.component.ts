@@ -19,17 +19,23 @@ export class NewPostComponent implements OnInit {
   postagem: Postagem = new Postagem()
   listaPostagens?: Postagem[]
   listaTemas?: Tema[]
-  idTema!: number
+  idTema!: number 
   tema: Tema = new Tema()
 
   constructor(
     private router: Router,
-    private authService: AuthService,
     private temaService: TemaService,
     private postagemService: PostagemService
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.getAllTemas()
+  }
+
+  getAllTemas() {
+    this.temaService.getAllTema().subscribe((resp: Tema[]) => {
+      this.listaTemas = resp
+    })
   }
 
   publicar() {
@@ -42,6 +48,12 @@ export class NewPostComponent implements OnInit {
       alert('SUCESSO')
       this.postagem = new Postagem()
       this.router.navigate(['/inicio'])
+    })
+  }
+
+  findByIdTema() {
+    this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
+      this.tema = resp
     })
   }
 

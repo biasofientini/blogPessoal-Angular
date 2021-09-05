@@ -11,29 +11,39 @@
         <div class="row align-items-center justify-content-center">
             <div class="col-md-4 mx-4 mr-4">
                 <div class="form-group">
-                    <label for="usuario">Tittle</label>
-                    <input class="form-control" type="text" name="usuario" id="usuario" placeholder="Your post tittle">
+                    <label for="usuario" class="fs-label">Tittle</label>
+                    <input [(ngModel)]='postagem.titulo' class="form-control" type="text" name="usuario" id="usuario"
+                        placeholder="Your post tittle">
                 </div>
             </div>
             <div class="col-md-4 mx-4 ml-4">
+                <!-- <div class="form-group">
+                    <label for="usuario" class="fs-label">Subject</label>
+                    <select name="usuario" class="form-control" id="usuario" [(ngModel)]='idTema'
+                        (change)='findByIdTema()'>
+                        <option *ngFor='let item of listaTemas' value="{{item.id}}">{{item.descricao}}</option>
+                    </select>
+                </div> -->
                 <div class="form-group">
-                    <label for="usuario">Subject</label>
-                    <input class="form-control" type="text" name="usuario" id="usuario" placeholder="Your post subject">
+                    <label for="texto" class="fs-label">Subject</label>
+                    <h5 class="fs-14">*If you want to create a new one, <a href="/tema">click here</a>*</h5>
+                    <select name="tema" class="form-control" id="tema" [(ngModel)]='idTema' (change)='findByIdTema()'>
+                        <option *ngFor='let item of listaTemas' value="{{item.id}}">{{item.descricao}}</option>
+                    </select>
                 </div>
             </div>
         </div>
     </div>
     <div class="col-md-12 mt-4">
         <div class="row d-flex justify-content-center">
-            <div class="col-md-10">
-                <div class="form-group">
-                    <input class="form-control" type="text" name="usuario" id="usuario" placeholder="Type here..."
-                        style="height: 300px;">
-                </div>
+            <div class="form-group">
+                <label for="usuario" class="fs-label ml-5">Type here...</label>
+                <textarea [(ngModel)]='postagem.texto' name="texto" class="form-control" id="texto" cols="150"
+                    rows="10"></textarea>
             </div>
         </div>
     </div>
     <div class="col-md-12 d-flex justify-content-center mb-5 p-2 mt-3">
-        <button class="buttonpadrao">CREATE</button>
+        <button class="buttonpadrao" (click)='publicar()'>CREATE</button>
     </div>
 </div>

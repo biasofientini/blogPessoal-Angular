@@ -50,12 +50,6 @@ export class InicioComponent implements OnInit {
     })
   }
 
-  findByIdTema() {
-    this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
-      this.tema = resp
-    })
-  }
-
   getAllPostagens() {
     this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
       this.listaPostagens = resp
@@ -70,6 +64,11 @@ export class InicioComponent implements OnInit {
 
   newPost() {
     this.router.navigate(['/new-post'])
+  }
+
+  logout() {
+    localStorage.clear()
+    this.router.navigate(['/home'])
   }
 
 }
