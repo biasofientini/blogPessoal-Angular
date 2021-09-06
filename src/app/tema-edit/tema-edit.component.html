@@ -1,0 +1,28 @@
+<div class="container-fluid">
+
+    <div class="col-md-12 d-flex justify-content-end">
+        <h3 (click)='cancel()' class="mt-2 mr-0 p-4"
+            style="font-size: 18px; color: #E75454; cursor: pointer; letter-spacing: 0.12em; font-weight: normal;">
+            CANCEL</h3>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center fs-titulo mt-3">EDIT THEME "{{tema.descricao}}"</h1>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="descricao" class="fs-14 mt-4">Description</label>
+                <input type="text" class="form-control" id="descricao" [(ngModel)]='tema.descricao'>
+            </div>
+
+            <div class="d-flex justify-content-center mt-5">
+                <button class="btn buttonpadrao" (click)='update()'>Edit</button>
+            </div>
+        </div>
+    </div>
+
+</div>

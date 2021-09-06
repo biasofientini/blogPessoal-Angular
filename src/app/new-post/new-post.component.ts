@@ -14,7 +14,6 @@ import { TemaService } from '../service/tema.service';
 })
 export class NewPostComponent implements OnInit {
 
-
   user: User = new User()
   postagem: Postagem = new Postagem()
   listaPostagens?: Postagem[]

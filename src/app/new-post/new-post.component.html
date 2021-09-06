@@ -95,10 +95,8 @@
                             <td class="fs-14">{{item.id}}</td>
                             <td class="fs-14">{{item.descricao}}</td>
                             <td class="d-flex justify-content-end">
-                                <button class="btn button-delete-edit mr-3"
-                                    [routerLink]="['/tema-edit', item.id]">Edit</button>
-                                <button class="btn button-delete-edit"
-                                    [routerLink]="['/tema-delete', item.id]">Delete</button>
+                                <button class="btn button-delete-edit mr-3" [routerLink]="['/tema-edit', item.id]" data-dismiss="modal" aria-label="Close">Edit</button>
+                                <button class="btn button-delete-edit" [routerLink]="['/tema-delete', item.id]">Delete</button>
                             </td>
                         </tr>
                     </tbody>
