@@ -20,6 +20,7 @@ export class InicioComponent implements OnInit {
   listaTemas?: Tema[]
   idTema!: number
   tema: Tema = new Tema()
+  fotoValida: boolean = false
 
   constructor(
     private router: Router,
@@ -70,6 +71,10 @@ export class InicioComponent implements OnInit {
 
   newPost() {
     this.router.navigate(['/new-post'])
+  }
+
+  valid() {
+    this.fotoValida = true
   }
 
 }
