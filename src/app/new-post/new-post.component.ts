@@ -51,6 +51,15 @@ export class NewPostComponent implements OnInit {
     })
   }
 
+  create() {
+    this.temaService.postTema(this.tema).subscribe((resp: Tema) => {
+      this.tema = resp
+      alert('SUCESSO')
+      this.getAllTemas()
+      this.tema = new Tema()
+    })
+  }
+
   findByIdTema() {
     this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
       this.tema = resp

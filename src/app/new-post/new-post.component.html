@@ -7,8 +7,8 @@
     <div class="col-md-12 align-items-center mt-5 mb-5">
         <h1 class="fs-titulo text-center p-2">NEW POST</h1>
     </div>
-    <div class="col-md-12">
-        <div class="row align-items-center justify-content-center">
+    <div class="col-md-12 align-items-center">
+        <div class="row justify-content-center">
             <div class="col-md-4 mx-4 mr-4">
                 <div class="form-group">
                     <label for="usuario" class="fs-label">Tittle</label>
@@ -17,19 +17,14 @@
                 </div>
             </div>
             <div class="col-md-4 mx-4 ml-4">
-                <!-- <div class="form-group">
-                    <label for="usuario" class="fs-label">Subject</label>
-                    <select name="usuario" class="form-control" id="usuario" [(ngModel)]='idTema'
-                        (change)='findByIdTema()'>
-                        <option *ngFor='let item of listaTemas' value="{{item.id}}">{{item.descricao}}</option>
-                    </select>
-                </div> -->
                 <div class="form-group">
-                    <label for="texto" class="fs-label">Subject</label>
-                    <h5 class="fs-14">*If you want to create a new one, <a href="/tema">click here</a>*</h5>
+                    <label for="texto" class="fs-label">Theme</label>
                     <select name="tema" class="form-control" id="tema" [(ngModel)]='idTema' (change)='findByIdTema()'>
                         <option *ngFor='let item of listaTemas' value="{{item.id}}">{{item.descricao}}</option>
                     </select>
+                    <h5 class="fs-14 mt-2">*Want to create a new one? <a data-toggle="modal" data-target="#login"
+                            style="cursor: pointer;">click here</a>. To delete or edit, <a data-toggle="modal"
+                            data-target="#edit" style="cursor: pointer;">click here</a>*</h5>
                 </div>
             </div>
         </div>
@@ -45,5 +40,70 @@
     </div>
     <div class="col-md-12 d-flex justify-content-center mb-5 p-2 mt-3">
         <button class="buttonpadrao" (click)='publicar()'>CREATE</button>
+    </div>
+</div>
+
+<!-- Modal - NEW -->
+<div #login class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <a routerLink='/inicio' class="text-white text-left">
+                    <i class="fa fa-angle-double-left" aria-hidden="true"></i> inicio
+                </a>
+                <h1 class="fs-titulo-modal text-center">NEW THEME</h1>
+                <h5 class="fs-label text-center my-4 mb-2 mt-2">Create a new theme here:</h5>
+                <div class="form-group">
+                    <input [(ngModel)]='tema.descricao' type="text" class="form-control" id="descricao"
+                        placeholder="Type here the theme's description">
+                </div>
+            </div>
+            <div class="d-flex justify-content-center font-fam mb-3">
+                <button class="btn buttonpadrao" type="submit" data-dismiss="modal" aria-label="Close"
+                    (click)='create()'>CREATE</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal - DELETE/EDIT -->
+<div #edit class="modal fade" id="edit" tabindex="-1" aria-labelledby="Modal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h1 class="fs-titulo-modal text-center mt-3">DELETE OR EDIT A THEME</h1>
+                <table class="table table-hover mt-5">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="fs-14">#</th>
+                            <th scope="col" class="fs-14">Descrição</th>
+                            <th scope="col" class="text-right fs-14">Modificações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor='let item of listaTemas'>
+                            <td class="fs-14">{{item.id}}</td>
+                            <td class="fs-14">{{item.descricao}}</td>
+                            <td class="d-flex justify-content-end">
+                                <button class="btn button-delete-edit mr-3"
+                                    [routerLink]="['/tema-edit', item.id]">Edit</button>
+                                <button class="btn button-delete-edit"
+                                    [routerLink]="['/tema-delete', item.id]">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 </div>
