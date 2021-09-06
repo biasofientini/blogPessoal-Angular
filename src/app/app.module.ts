@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NewPostComponent } from './new-post/new-post.component';
 import { TemaEditComponent } from './tema-edit/tema-edit.component';
+import { TemaDeleteComponent } from './tema-delete/tema-delete.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { TemaEditComponent } from './tema-edit/tema-edit.component';
     SobreComponent,
     InicioComponent,
     NewPostComponent,
-    TemaEditComponent
+    TemaEditComponent,
+    TemaDeleteComponent
   ],
   imports: [
     BrowserModule,

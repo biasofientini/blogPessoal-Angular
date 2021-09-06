@@ -86,8 +86,8 @@
                     <thead>
                         <tr>
                             <th scope="col" class="fs-14">#</th>
-                            <th scope="col" class="fs-14">Descrição</th>
-                            <th scope="col" class="text-right fs-14">Modificações</th>
+                            <th scope="col" class="fs-14">Description</th>
+                            <th scope="col" class="text-right fs-14">Changes</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -96,7 +96,7 @@
                             <td class="fs-14">{{item.descricao}}</td>
                             <td class="d-flex justify-content-end">
                                 <button class="btn button-delete-edit mr-3" [routerLink]="['/tema-edit', item.id]" data-dismiss="modal" aria-label="Close">Edit</button>
-                                <button class="btn button-delete-edit" [routerLink]="['/tema-delete', item.id]">Delete</button>
+                                <button class="btn button-delete-edit" [routerLink]="['/tema-delete', item.id]" data-dismiss="modal" aria-label="Close">Delete</button>
                             </td>
                         </tr>
                     </tbody>
