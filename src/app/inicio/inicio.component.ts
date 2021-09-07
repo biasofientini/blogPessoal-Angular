@@ -21,6 +21,10 @@ export class InicioComponent implements OnInit {
   idTema!: number
   tema: Tema = new Tema()
   fotoValida: boolean = false
+  tituloPost!: string
+  nomeTema!: string
+  key = 'data'
+  reverse = true
 
   constructor(
     private router: Router,
@@ -74,6 +78,26 @@ export class InicioComponent implements OnInit {
   logout() {
     localStorage.clear()
     this.router.navigate(['/home'])
+  }
+
+  findByTituloPostagem() {
+    if(this.tituloPost == ''){
+      this.getAllPostagens()
+    } else{
+      this.postagemService.getByTitutlo(this.tituloPost).subscribe((resp: Postagem[]) => {
+        this.listaPostagens = resp
+      })
+    }
+  }
+
+  findByNomeTema(){
+    if(this.nomeTema == ''){
+      this.getAllTemas()
+    } else{
+      this.temaService.getByNome(this.nomeTema).subscribe((resp: Tema[]) => {
+        this.listaTemas = resp
+      })
+    }
   }
 
 }
