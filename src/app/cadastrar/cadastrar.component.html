@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col">
-            <div class="row d-flex justify-content-center">
+             <div class="row d-flex justify-content-center">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -35,7 +35,7 @@
             </div>
         </div>
 
-        <div class="col-md-6 mt-5 mb-5">
+        <div class="col-md-6 mt-5 mb-3">
 
             <div class="row d-flex justify-content-center">
 
@@ -47,33 +47,33 @@
 
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input class="form-control" type="text" name="name" id="name" placeholder="Name">
+                            <input [(ngModel)]='user.nome' class="form-control" type="text" name="name" id="name" placeholder="Name">
                         </div>
 
                         <div class="form-group">
                             <label for="user">Username</label>
-                            <input class="form-control" type="text" name="user" id="user" placeholder="Username">
+                            <input [(ngModel)]='user.usuario' class="form-control" type="text" name="user" id="user" placeholder="Username">
                         </div>
 
                         <div class="form-group">
                             <label for="piclink">Picture link</label>
-                            <input class="form-control" type="text" name="piclink" id="piclink"
+                            <input [(ngModel)]='user.foto' class="form-control" type="text" name="piclink" id="piclink"
                                 placeholder="Picture link">
                         </div>
 
                         <div class="form-group">
                             <label for="password">Password</label>
-                            <input class="form-control" type="password" name="password" id="password"
+                            <input (input)='confirmSenha($event)' class="form-control" type="password" name="password" id="password"
                                 placeholder="Password">
                         </div>
 
                         <div class="form-group">
                             <label for="confirmpassword">Confirm password</label>
-                            <input class="form-control" type="password" name="confirmpassword" id="confirmsenha"
+                            <input [(ngModel)]='user.senha' class="form-control" type="password" name="confirmpassword" id="confirmsenha"
                                 placeholder="Confirm password">
                         </div>
 
-                        <div class="d-flex justify-content-center mt-5">
+                        <div class="d-flex justify-content-center mt-4">
                             <button type="submit" class="btn buttonpadrao mr-4" (click)='cancel()'>CANCEL</button>
                             <button type="submit" class="btn buttonpadrao" (click)='signup()'>SIGN UP</button>
                         </div>
@@ -81,6 +81,7 @@
                         <div>
                             <div class="gifentrar-cadastrar" id="img-gif"></div>
                         </div>
+
                     </div>
 
                 </div>

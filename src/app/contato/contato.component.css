@@ -10,3 +10,12 @@
     font-family: Raleway;
     color: #A8A0A0;
 }
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: #E75454;
+}

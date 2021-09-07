@@ -24,11 +24,11 @@ export class MenuComponent implements OnInit {
   }
 
   more() {
-
+    this.router.navigate(['/mais'])
   }
 
   about() {
-    
+    this.router.navigate(['/sobre'])
   }
 
 }

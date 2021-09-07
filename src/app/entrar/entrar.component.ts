@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserLogin } from '../model/UserLogin';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-entrar',
@@ -8,8 +10,11 @@ import { Router } from '@angular/router';
 })
 export class EntrarComponent implements OnInit {
 
+  userLogin: UserLogin = new UserLogin()
+
   constructor(
-    private router: Router
+    private router: Router,
+    private authService: AuthService
   ) { }
 
   ngOnInit(): void {
@@ -20,6 +25,15 @@ export class EntrarComponent implements OnInit {
   }
 
   login() {
-    this.router.navigate(['/entrar'])
+    this.authService.login(this.userLogin).subscribe((resp: UserLogin) => {
+      localStorage.setItem("token", resp.token)
+      localStorage.setItem("id", resp.id.toString())
+      this.router.navigate(['/inicio'])
+    }, erro => {
+      if(erro.status == 500){
+        alert('ERRO')
+      }
+    }
+    )
   }
 }
