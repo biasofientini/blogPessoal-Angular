@@ -4,10 +4,36 @@
     letter-spacing: 0.12em;
 }
 
+.fs-ul{
+    font-size: 22px;
+    font-family: Raleway;
+    letter-spacing: 0.12em;
+    color: #E75454;
+}
+
+.fs-ul:hover{
+    color: #EEACAC;
+}
+
+.fs-ul:active{
+    color: #EEACAC;
+}
+
 .fs-14{
     font-size: 14px;
     font-family: Raleway;
     letter-spacing: 0.12em;
+}
+
+.fs-post{
+    font-size: 20px;
+    font-family: Raleway;
+    letter-spacing: 0.12em;
+    color: #E75454;
+}
+
+.fs{
+    font-size: 18px;
 }
 
 .borderimg{

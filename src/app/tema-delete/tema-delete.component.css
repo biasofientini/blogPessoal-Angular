@@ -1,0 +1,31 @@
+.buttonpadrao{
+    width: 130px;
+    height: 40px;
+    top: 300px;
+    background: #E75454;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
+    border: 0px;
+    font-family: Raleway;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.buttonpadrao:hover{
+    color: black;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+}
+
+.fs-titulo{
+    font-size: 40px;
+    font-family: Raleway;
+    color: #E75454;
+    letter-spacing: 0.12em;
+}
+
+.fs-label{
+    font-size: 18px;
+    font-family: Raleway;
+    color: #A8A0A0;
+    letter-spacing: 0.12em; 
+}
